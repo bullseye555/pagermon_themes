@@ -10,6 +10,7 @@ Alters the layout of Pagermon when on smaller screens so that the Date, Time, Ic
 ** Currently in development **
 
 ### Dark Compact Mode (Combines the Compact and Dark Modes above)
+Download the complete folder [here](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fbullseye555%2Fpagermon_themes%2Ftree%2Fmain%2FCompact%2520Dark%2520Mode) (Download function provided by external website [download-directory.github.io](download-directory.github.io). This will download the full folder as a ZIP file. Be sure to unzip if before uploading to Pagermon!)
 #### Compact: 
 
 ![image](https://github.com/bullseye555/pagermon_themes/assets/28804763/33bd8e63-42ea-4630-9114-4b9eb9ccc44e)
@@ -19,7 +20,7 @@ Alters the layout of Pagermon when on smaller screens so that the Date, Time, Ic
 ![image](https://github.com/bullseye555/pagermon_themes/assets/28804763/5bc849b8-53fc-4541-8937-841b28033327)
 
 # Instructions
-* Add the entire folder into pagermon\server\themes
+* Download the entire folder and add into pagermon\server\themes
   * ![image](https://github.com/bullseye555/pagermon_themes/assets/28804763/4291d704-78ed-4105-88c3-8f6e0d298d9e)
 * You'll then be able to select the relevant as a theme from the Settings page
   * ![image](https://github.com/bullseye555/pagermon_themes/assets/28804763/613b8bd4-1e86-4685-9fcb-0236782bd4f2)
