@@ -57,7 +57,7 @@
           <div class="col-xs-offset-1 col-xs-10">
           <form action="/" method="get">
             <div class="input-group">
-              <input style="color:white;" id="query" type="text" class="form-control" name="q" placeholder="Search" ng-model="query">
+              <input  id="query" type="text" class="form-control" name="q" placeholder="Search" ng-model="query">
               <span class="input-group-btn">
                 <button type="submit" class="btn btn-default" ng-disabled="!query" ng-class="{disabledLink: !query}"><i class="fa fa-fw fa-search"></i></button>
                 <button ng-if="!hasQuery" ng-click="clearSearch()" class="btn btn-default" ng-class="{disabledLink: !query}" ng-disabled="!query"><i class="fa fa-fw fa-times"></i></button>
@@ -99,18 +99,18 @@
             </th>
 			<!-- If HideSource is disabled, or the login user role is an admin, show the Source column header row. Do not display for Mobile and Small displays -->
             <% if (!hidesource || (login && user.role == 'admin')) { %>
-              <th class="noMobile noSmall" style="text-align: center; color: white;">Src</th>
+              <th class="noMobile noSmall" style="text-align: center; ">Src</th>
             <% } %>
 			<!-- If HideCapcode is disabled, or the login user role is an admin, show the Capcode column header row. Do not display for Mobile and Small displays -->
             <% if (!hidecapcode || (login && user.role == 'admin')) { %>
-              <th class="noMobile noSmall" style="text-align: center; color: white;">Capcode</th>
+              <th class="noMobile noSmall" style="text-align: center; ">Capcode</th>
             <% } %>
 			<!-- Icon Column header row. Do not display for Mobile and Small displays. No Column Header text -->
             <th class="noMobile noSmall"></th>
 			<!-- Agency Column header row. Do not display for Mobile and Small displays. No Column Header text -->
             <th class="noMobile noSmall"></th>
 			<!-- Message Column header row -->
-            <th style="text-align: center; color: white;">Message
+            <th style="text-align: center; ">Message
               <span ng-if="filter || hasQuery" class="pull-left" style="vertical-align: middle; padding-right: 10px;">
                   <strong>Filter:</strong> <a ng-href="/" style="margin-bottom: 3px;" class="btn btn-primary btn-xs">{{filter || origQuery}} <i class="fa fa-fw fa-times"></i></a>
               </span></th>
@@ -119,13 +119,13 @@
         <tbody>
           <tr ng-repeat="message in messages | filter: search">
             <!-- In non-Compact Mode, display the Date Column -->
-            <td class="shrink noMobile noSmall" style="color: white;">{{message.date}}</td>
+            <td class="shrink noMobile noSmall" >{{message.date}}</td>
             <!-- Time Column -->
-            <td class="shrink" style="text-align: center;" style="font-weight: bold; color: white; text-align: center;">
+            <td class="shrink" style="text-align: center;" style="font-weight: bold;  text-align: center;">
             <!-- In Compact Mode, display the Date and add a line break -->
-            <div class="noLarge" style="font-weight: bold; color: white; text-align: center;">{{message.date}}</div>
+            <div class="noLarge" style="text-align: center;">{{message.date}}</div>
             <!-- Display the Time in all Display Modes -->
-            <div style="color: white; text-align: center;">{{message.timestamp}}</div>
+            <div style=" text-align: center;">{{message.timestamp}}</div>
             <!-- In Compact Mode add Icon and Agency to the Time field-->
             <div class="noLarge">
 				<!-- Capcode Alias Icon -->    
@@ -139,23 +139,23 @@
                 <i ng-if="!message.icon" class="fa fa-question fa-stack-1x fa-inverse"></i>
               </span>
             <!-- In Compact Mode and if there is no agency, display the agency and enable the popup to filter by alias -->
-              <span style="color: white; vertical-align: middle;" ng-if="message.agency" uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'agency'" popover-trigger="'outsideClick'"><br><strong>{{message.agency || ''}}</strong> </span>
+              <span style=" vertical-align: middle;" ng-if="message.agency" uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'agency'" popover-trigger="'outsideClick'"><br><strong>{{message.agency || ''}}</strong> </span>
 			  
 			 <!-- In Compact Mode and if there is no agency, display Unknown -->
-              <span style="color: white; vertical-align: middle;" ng-if="!message.agency" ><br><strong>{{message.agency || 'Unknown' }}</strong> </span>
+              <span style=" vertical-align: middle;" ng-if="!message.agency" ><br><strong>{{message.agency || 'Unknown' }}</strong> </span>
 			  
 			  </div>
               </td>
             <!-- In non-Compact mode and if a logged in user or source is being displayed to all users, then display the Source -->
             <% if (!hidesource || (login && user.role == 'admin')) { %>
               <td class="shrink noMobile noSmall clickable-td" uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'source'" popover-trigger="'outsideClick'" style="background-color: {{message.color || 'grey'}}; text-align: center;">
-                <span class="small" style="color: white; font-family: monospace;"><strong>{{message.source}}</strong></span>
+                <span class="small" style=" font-family: monospace;"><strong>{{message.source}}</strong></span>
               </td>
             <% } %>
             <!-- In non-Compact mode and if a logged in user or source is being displayed to all users, then display the Capcode Address -->
             <% if (!hidecapcode || (login && user.role == 'admin')) { %>
               <td class="shrink noMobile noSmall clickable-td" uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'address'" popover-trigger="'outsideClick'" style="background-color: {{message.color || 'grey'}}; text-align: center;">
-                <span class="small" style="color: white; font-family: monospace;"><strong>{{message.address}}</strong></span>
+                <span class="small" style=" font-family: monospace;"><strong>{{message.address}}</strong></span>
               </td>
             <% } %>
             <!-- In non-Compact mode and if there is an agency, show the Icon & Agency and enable the popup to filter by alias -->
@@ -205,9 +205,9 @@
     </div>
   <div class="row" ng-if="messages.length == 0">
     <div class="col-sm-8 col-sm-offset-2" style="text-align: center; vertical-align: middle;">
-      <h4 style="color:white;">No messages found!</h4>
-      <div style="color:white;" ng-if="hasQuery"><p>Consider broadening your search terms and try again.</p></div>
-      <div style="color:white;" ng-if="!hasQuery"><p>Have you loaded any message data yet?</p>
+      <h4 >No messages found!</h4>
+      <div  ng-if="hasQuery"><p>Consider broadening your search terms and try again.</p></div>
+      <div  ng-if="!hasQuery"><p>Have you loaded any message data yet?</p>
         <p>If you believe you reached this message by error, <a href="https://github.com/pagermon/pagermon/issues"
                                                                 target="_blank">log an issue.</a></p>
       </div>
@@ -218,7 +218,7 @@
         <div class="col-xs-offset-1 col-xs-10">
         <form action="/" method="get">
           <div class="input-group">
-            <input style="color:white;" id="query" type="text" class="form-control" name="q" placeholder="Search" ng-model="query">
+            <input  id="query" type="text" class="form-control" name="q" placeholder="Search" ng-model="query">
             <span class="input-group-btn">
               <button type="submit" class="btn btn-default" ng-disabled="!query" ng-class="{disabledLink: !query}"><i class="fa fa-fw fa-search"></i></button>
               <button ng-if="!hasQuery" ng-click="clearSeaarch()" class="btn btn-default" ng-class="{disabledLink: !query}" ng-disabled="!query"><i class="fa fa-fw fa-times"></i></button>

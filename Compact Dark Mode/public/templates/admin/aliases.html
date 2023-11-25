@@ -7,7 +7,7 @@
 </div>
 <div class="row" style="padding-top: 10px">
   <div class="col-sm-6 col-xs-12">
-    <h4 style="padding-left: 15px; color: white;"><a href="/admin/">Admin</a> / Aliases</h4></div>
+    <h4 style="padding-left: 15px; "><a href="/admin/">Admin</a> / Aliases</h4></div>
 
   <div class="col-xs-12">
           <hr />
@@ -53,9 +53,9 @@
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-{{alias.icon}} fa-stack-1x fa-inverse"></i>
               </span>
-            <span style="vertical-align: middle; color: white;">{{alias.icon}}</span>
+            <span style="vertical-align: middle; ">{{alias.icon}}</span>
           </td>
-          <td class="shrink" style="color: white;"><strong>{{alias.agency || ''}}</strong></td>
+          <td class="shrink" ><strong>{{alias.agency || ''}}</strong></td>
           <td class="shrink"><i class="fa fa-circle text-success" ng-if="alias.ignore == 0"></i><i
                   class="fa fa-exclamation-circle text-danger" ng-if="alias.ignore == 1"></i></td>
           <td class="expand clickable-td" ng-click="aliasDetail(alias.id);" style="color: #d32d27;">{{alias.alias ||

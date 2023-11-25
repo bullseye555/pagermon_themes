@@ -13,7 +13,7 @@
 
 /* add generic styling for the editor */
 .ta-root.focussed > .ta-scroll-window.form-control {
-    border-color: #111111;
+    border-color: #d7d7d7;
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(12, 12, 12);
     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(12, 12, 12);
@@ -56,7 +56,7 @@
     bottom: 16px;
     right: 16px;
     border: 1px solid black;
-    background-color:  black;
+    background-color: black;
     padding: 0 4px;
     opacity: 0.7;
 }
@@ -123,7 +123,7 @@
     background-color: #5f5c5c;
     -webkit-background-clip: padding-box;
             background-clip: padding-box;
-    border: 1px solid #111111;
+    border: 1px solid white;
     border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 6px;
     -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);

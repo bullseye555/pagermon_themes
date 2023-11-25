@@ -1,10 +1,41 @@
+/* Dark Mode specific color overrides */
 #home-body {
-    background: #111111;
+    background: #373737;
+    color: white;
 }
 
 #wrap {
-    background: #111111;
+    background: #373737;
+    colour: white;
 }
+
+#helpBlock, p {
+    color: #d7d7d7;
+}
+
+#popoverOut, .modal-header, .modal-footer {
+    background-color: #5e5e5e;
+}
+
+#popoverIn, .modal-body {
+    background-color: #373737;
+}
+
+h1, h2, h3, h4, h5, label, input, .thead-default {
+    color: white;
+}
+
+
+select {
+    color: white;
+    background: #0D1117;
+}
+
+.modal-title {
+    color: white;
+}
+
+/* CSS */
 
 .loading {
  pointer-events: all;
@@ -33,8 +64,8 @@
 }
 
 .angular-highlight {
-    background: rgb(250, 73, 73); /* Fallback */
-    background-color: rgba(61, 54, 54, 0.966);
+    background: rgb(222, 222, 222); /* Fallback */
+    background-color: rgba(222, 222, 222, 0.966);
     color: #f04444;
     margin: -1px;
     padding: 5px 5px;
@@ -57,18 +88,6 @@
     color: rgb(255, 255, 255) 
 }
 
-.table-striped>tbody>tr:hover, .table-striped>tbody>tr:focus, .table-striped>tbody>tr:focus:hover {
-    background: #474747;
-    cursor: pointer;
-    filter: brightness(85%);
-}
-
-td.clickable-td:hover, td.clickable-td:focus, td.clickable-td:focus:hover {
-    background: #f85959;
-    cursor: pointer;
-    filter: brightness(85%);
-}
-
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
@@ -84,8 +103,13 @@ td.clickable-td:hover, td.clickable-td:focus, td.clickable-td:focus:hover {
     }
 }
 
+.form-control {
+    color: white;
+}
+
 .form-control[disabled], fieldset[disabled] .form-control {
-    color: gray;
+    color: #bababa;
+    background-color: #444444;
 }
 
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
@@ -103,7 +127,7 @@ a:hover, a:focus {
 }
 
 .navbar {
-    background-color: #111111;
+    background-color: #1e1e1e;
 }
 
 .navbar-toggle {
@@ -111,12 +135,12 @@ a:hover, a:focus {
     margin-top: 17px;
 }
 
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav>li.active>a, .nav>li.active>a:focus  {
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav>li.active>a, .nav>li.active>a:focus {
     color: firebrick;
     -webkit-box-shadow: inset 0 -2px 0 white;
     -mox-box-shadow: inset 0 -2px 0 white;
     box-shadow: inset 0 -2px 0 white;
-    background-color: #111111;
+    background-color: #1e1e1e;
 }
 
 .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus:hover, .nav>li.active>a:hover, .nav>li.active>a:focus:hover {
@@ -124,7 +148,7 @@ a:hover, a:focus {
     -webkit-box-shadow: inset 0 -2px 0 FireBrick;
     -mox-box-shadow: inset 0 -2px 0 FireBrick;
     box-shadow: inset 0 -2px 0 FireBrick;
-    background-color: #111111;
+    background-color: #1e1e1e;
 }
 
 .nav-tabs>li>a:hover, .nav-tabs>li>a:focus:hover, .nav>li>a:hover, .nav>li>a:focus:hover {
@@ -132,7 +156,7 @@ a:hover, a:focus {
     -webkit-box-shadow: inset 0 -2px 0 FireBrick;
     -mox-box-shadow: inset 0 -2px 0 FireBrick;
     box-shadow: inset 0 -2px 0 FireBrick;
-    background-color: #111111;
+    background-color: #1e1e1e;
 }
 
 .nav-tabs.nav-justified>li:first-child>a, .nav-tabs.nav-justified>li:first-child>span {
@@ -150,17 +174,17 @@ a:hover, a:focus {
 }
 
 .nav-tabs.nav-justified>li>a, .nav-tabs.nav-justified>li>a:hover, .nav-tabs.nav-justified>li>a:focus, .nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:hover, .nav-tabs.nav-justified>.active>a:focus {
-    border-top: 1px solid #111111;
-    border-right: 1px solid #111111;   
-    border-left: 1px solid #111111; 
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white; 
 }
 
-.navbar-nav>li>a:hover, .navbar-nav>li>a:focus:hover, .navbar-nav>li.active>a:hover, .navbar-nav>li.active>a:focus:hover, .navbar-nav>li.active>a, .navbar-nav>li.active>a:focus {  
-    background-color: #111111;
+.navbar-nav>li>a:hover, .navbar-nav>li>a:focus:hover, .navbar-nav>li.active>a:hover, .navbar-nav>li.active>a:focus:hover, .navbar-nav>li.active>a, .navbar-nav>li.active>a:focus {
+    background-color: #1e1e1e;
 }
 
 .navbar-nav>li>a {
-    background-color: #111111;
+    background-color: #1e1e1e;
   /*  -webkit-box-shadow: inset 0 -2px 0 #ddd;
     -mox-box-shadow: inset 0 -2px 0 #ddd;
     box-shadow: inset 0 -2px 0 #ddd; */
@@ -222,7 +246,7 @@ a:hover, a:focus {
 
 .btn-lg.disabled {
     background-color: #cacaca;
-	color: black;
+    color: black;
 }
 
 .btn-subtext {
@@ -303,13 +327,25 @@ table .expand {
 }
 
 .table-striped>tbody>tr:nth-of-type(odd) {
-    background-color: #2C2C2C!important;
-	color: white;
+    background-color: #1e1e1e!important;
+    color: white;
+}
+
+.table-striped>tbody>tr:hover, .table-striped>tbody>tr:focus, .table-striped>tbody>tr:focus:hover {
+    background: #474747;
+    cursor: pointer;
+    filter: brightness(85%);
+}
+
+td.clickable-td:hover, td.clickable-td:focus, td.clickable-td:focus:hover {
+    background: #f85959;
+    cursor: pointer;
+    filter: brightness(85%);
 }
 
 .table-striped>tbody>tr:nth-of-type(even) {
-    background-color: #373737!important;
-	color: white;
+    background-color: #292929!important;
+    color: white;
 }
 
 @media screen and (max-width: 400px) {
@@ -340,9 +376,9 @@ table .expand {
 }
 
 @media screen and (min-width:768px) {
-	table .noLarge {
-		display: none;
-	}
+    table .noLarge {
+        display: none;
+    }
 }
 
 /* Pagination */
@@ -362,7 +398,7 @@ table .expand {
     width: 100%;
     text-align: center;
     color: rgb(243, 53, 53);
-    background: #111111;
+    background: #373737;
     border: 0;
     border-top: 1px solid #faf8f8;
     border-bottom: 1px solid #faf8f8;
@@ -389,6 +425,9 @@ table .expand {
 
 .pagination>.disabled>span, .pagination>.disabled>span:hover, .pagination>.disabled>span:focus, .pagination>.disabled>a, .pagination>.disabled>a:hover, .pagination>.disabled>a:focus {
     cursor: default;
+    background-color: transparent;
+    color: #e0d0d0;
+    
 }
 
 .dropdown-menu>.disabled>a, .dropdown-menu>.disabled>a:hover, .dropdown-menu>.disabled>a:focus {
@@ -423,7 +462,7 @@ table .expand {
     border-top: 30px solid FireBrick;
 }
 
-.triangle-down p{  
+.triangle-down p{
   text-align:center;
   color:rgb(175, 56, 43);
   margin-top:-33px;
@@ -443,7 +482,7 @@ table .expand {
 .disabledLink {
     color: #e0d0d0;
     pointer-events:none;
-	background-color: #cacaca
+    background-color: transparent
 }
 
 html,
@@ -465,7 +504,7 @@ body {
 /* Set the fixed height of the footer here */
 #footer {
   height: 70px;
-  background-color: #111111;
+  background-color: #1e1e1e;
 }
 
 .footer-nav {

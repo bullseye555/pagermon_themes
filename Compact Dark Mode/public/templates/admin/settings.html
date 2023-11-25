@@ -5,17 +5,17 @@
   <button type="button" class="close" data-dismiss="alert" aria-label="Close" ng-click="alertMessage.show = false">&times;</button>
   <strong>{{alertMessage.text}}</strong>
 </div>
-<div class="row" style="padding-top: 10px; color: white;"">
+<div class="row" style="padding-top: 10px; "">
   <div class="col-xs-12">
-          <h4 style="padding-left: 15px; color: white;"><a href="/admin/">Admin</a> / Settings</h4>
+          <h4 style="padding-left: 15px; "><a href="/admin/">Admin</a> / Settings</h4>
           <hr />
           <form ng-submit="settingsSubmit()" class="form-horizontal" style="padding-bottom: 70px;">
 
-            <h5 style="color: white;">Global</h5>
+            <h5 >Global</h5>
             <div class="form-group">
               <label for="global.loglevel" class="col-xs-4 col-sm-3 control-label">Log level</label>
               <div class="col-xs-8 col-sm-9">
-                <select name="global.loglevel" ng-model="settings.global.loglevel" class="form-control" style="color: white; background: #0D1117;">
+                <select name="global.loglevel" ng-model="settings.global.loglevel" class="form-control">
                   <option value="debug">Debug</option>
                   <option value="info">Info</option>
                   <option value="warn">Warning</option>
@@ -26,7 +26,7 @@
             <div class="form-group">
               <label for="global.theme" class="col-xs-4 col-sm-3 control-label">Theme</label>
               <div class="col-xs-8 col-sm-9">
-                <select name="global.theme" ng-model="settings.global.theme" class="form-control" style="color: white; background: #0D1117;">
+                <select name="global.theme" ng-model="settings.global.theme" class="form-control" >
                   <option ng-repeat="theme in themes" value="{{theme}}"">{{theme}}</option>
                 </select>
                 <span id="helpBlock" class="help-block">Choose an installed theme. Note: An application restart is required. </span>
@@ -35,7 +35,7 @@
             <div class="form-group">
               <label for="global.faKey" class="col-xs-4 col-sm-3 control-label">Font Awesome Kit ID</label>
               <div class="col-xs-8 col-sm-9">
-                  <input class="form-control" style="color: white;" type="text" name="global.faKey" ng-model="settings.global.faKey" >
+                  <input class="form-control" type="text" name="global.faKey" ng-model="settings.global.faKey" >
                 <span id="helpBlock" class="help-block">Set the Font Aweome SVG and JS Kit ID - See <a href="https://fontawesome.com/start" target="_blank"> https://fontawesome.com/start </a> <br>
                   This should be a v5 kit, with SVG as the technology. Note: An application restart is required.</span>
               </div>
@@ -44,7 +44,7 @@
               <label for="global.sessionSecret" class="col-xs-4 col-sm-3 control-label">Session Secret</label>
               <div class="col-xs-8 col-sm-9">
                 <div class="input-group">
-                  <input style="color: white;" class="form-control" type="text" name="global.sessionSecret" ng-model="settings.global.sessionSecret" required readonly>
+                  <input class="form-control" type="text" name="global.sessionSecret" ng-model="settings.global.sessionSecret" required readonly>
                   <span class="input-group-addon" id="global.sessionSecret.addon">
                     <button class="btn btn-default" ng-click="generateKey('sessionSecret')" type="button">Generate</button>
                   </span>
@@ -55,7 +55,7 @@
             <div class="form-group">
               <label for="global.searchLocation" class="col-xs-4 col-sm-3 control-label">Homepage Search Bar Location</label>
               <div class="col-xs-8 col-sm-9">
-                <select name="global.searchLocation" ng-model="settings.global.searchLocation" class="form-control" style="color: white; background: #0D1117;">
+                <select name="global.searchLocation" ng-model="settings.global.searchLocation" class="form-control">
                   <option value="top">Top</option>
                   <option value="bottom">Bottom</option>
                 </select>
@@ -65,7 +65,7 @@
             <div class="form-group">
               <label for="global.monitorName" class="col-xs-4 col-sm-3 control-label">Monitor Name</label>
               <div class="col-xs-8 col-sm-9">
-                  <input class="form-control" type="text" name="global.monitorName" ng-model="settings.global.monitorName" style="color: white;">
+                  <input class="form-control" type="text" name="global.monitorName" ng-model="settings.global.monitorName" >
                 <span id="helpBlock" class="help-block">Set the title of your PagerMon website</span>
               </div>
             </div>
@@ -82,15 +82,15 @@
             <div class="form-group" ng-hide="!settings.global.frontPopupEnable">
               <label for="global.frontPopupTitle" class="col-xs-4 col-sm-3 control-label">Modal Title </label>
               <div class="col-xs-8 col-sm-9">
-                  <input class="form-control" style="color: white;" type="text" name="global.frontPopupTitle" ng-model="settings.global.frontPopupTitle" ng-required="settings.global.frontPopupEnable">
+                  <input class="form-control" type="text" name="global.frontPopupTitle" ng-model="settings.global.frontPopupTitle" ng-required="settings.global.frontPopupEnable">
                 <span id="helpBlock" class="help-block">Modal Title</span>
               </div>
             </div>
             <div class="form-group" ng-hide="!settings.global.frontPopupEnable">
               <label for="global.frontPopupContent" class="col-xs-4 col-sm-3 control-label">Modal Content </label>
               <div class="col-xs-8 col-sm-9">
-                <div text-angular name="global.frontPopupContent" style="color: white;" ng-model="settings.global.frontPopupContent" ng-required="settings.global.frontPopupEnable" ta-toolbar="[['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'pre', 'quote'],['bold', 'italics', 'underline', 'strikeThrough', 'ul', 'ol', 'redo', 'undo', 'clear'],['justifyLeft', 'justifyCenter', 'justifyRight', 'indent', 'outdent'],['html', 'insertImage','insertLink']]" ta-text-editor-class="clearfix border-around" ta-html-editor-class="border-around"></div>
-		            <span id="helpBlock" class="help-block">Modal Content</span>
+                <div text-angular name="global.frontPopupContent" ng-model="settings.global.frontPopupContent" ng-required="settings.global.frontPopupEnable" ta-toolbar="[['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'pre', 'quote'],['bold', 'italics', 'underline', 'strikeThrough', 'ul', 'ol', 'redo', 'undo', 'clear'],['justifyLeft', 'justifyCenter', 'justifyRight', 'indent', 'outdent'],['html', 'insertImage','insertLink']]" ta-text-editor-class="clearfix border-around" ta-html-editor-class="border-around"></div>
+                    <span id="helpBlock" class="help-block">Modal Content</span>
               </div>
             </div>
             <div class="form-group">
@@ -100,17 +100,17 @@
                 <label>
                 <input type="checkbox" name="global.SpecificAliasRefresh" ng-model="settings.global.SpecificAliasRefresh">
                 Refresh all messages for a specific Alias, when the Alias is saved. 
-		<span id="helpBlock" class="help-block">This mitigates the need for an Alias Refresh every time an alias is saved, but does not effect <b>_</b> wildcard alias.</span>
+        <span id="helpBlock" class="help-block">This mitigates the need for an Alias Refresh every time an alias is saved, but does not effect <b>_</b> wildcard alias.</span>
                 </label>
               </div>
               </div>
             </div>
 
-            <h5 style="color: white;">Database</h5><span class="text-warning">These settings require restart to take effect.</span>
+            <h5 >Database</h5><span class="text-warning">These settings require restart to take effect.</span>
             <div class="form-group">
               <label for="database.type" class="col-xs-4 col-sm-3 control-label">Type</label>
               <div class="col-xs-8 col-sm-9">
-                <select name="database.type" ng-model="settings.database.type" style="color: white; background: #0D1117;" class="form-control" required>
+                <select name="database.type" ng-model="settings.database.type" class="form-control" required>
                   <option value="sqlite3">SQLite</option>
                   <option value="mysql">MySQL / MariaDB</option>
                   <option value="oracledb">Oracle DB</option>
@@ -122,42 +122,42 @@
             <div class="form-group" ng-if="settings.database.type == 'sqlite3'">
               <label for="database.file" class="col-xs-4 col-sm-3 control-label">Path to Database File</label>
               <div class="col-xs-8 col-sm-9">
-              <input type="text" class="form-control" style="color: white;" name="database.file" ng-model="settings.database.file" required>
+              <input type="text" class="form-control" name="database.file" ng-model="settings.database.file" required>
               <span id="helpBlock" class="help-block">Configure the path to the SQLite Database</span>
               </div>
             </div>
             <div class="form-group" ng-if="settings.database.type == 'oracledb'">
               <label for="database.connectString" class="col-xs-4 col-sm-3 control-label">Database Connection String</label>
               <div class="col-xs-8 col-sm-9">
-              <input type="text" style="color: white;" class="form-control" name="database.connectString" ng-model="settings.database.connectString" required>
+              <input type="text" class="form-control" name="database.connectString" ng-model="settings.database.connectString" required>
               <span id="helpBlock" class="help-block">Oracle connection string</span>
               </div>
             </div>
             <div class="form-group" ng-if="settings.database.type == 'pg' || settings.database.type == 'mysql' || settings.database.type == 'mssql'">
               <label for="database.server" class="col-xs-4 col-sm-3 control-label">Database Server</label>
               <div class="col-xs-8 col-sm-9">
-              <input type="text" style="color: white;" class="form-control" name="database.server" ng-model="settings.database.server" required>
+              <input type="text" class="form-control" name="database.server" ng-model="settings.database.server" required>
               <span id="helpBlock" class="help-block">Database Server Address</span>
               </div>
             </div>
             <div class="form-group" ng-if="settings.database.type == 'pg' || settings.database.type == 'mysql' || settings.database.type == 'mssql'">
               <label for="database.port" class="col-xs-4 col-sm-3 control-label">Database Port</label>
               <div class="col-xs-8 col-sm-9">
-              <input type="text" style="color: white;" class="form-control" name="database.port" ng-model="settings.database.port" required>
+              <input type="text" class="form-control" name="database.port" ng-model="settings.database.port" required>
               <span id="helpBlock" class="help-block">Database Server Port (default is 3306)</span>
               </div>
             </div>
             <div class="form-group" ng-if="settings.database.type == 'pg' || settings.database.type == 'mysql' || settings.database.type == 'mssql'">
               <label for="database.database" class="col-xs-4 col-sm-3 control-label">Database Name</label>
               <div class="col-xs-8 col-sm-9">
-              <input type="text" style="color: white;" class="form-control" name="database.database" ng-model="settings.database.database" required>
+              <input type="text" class="form-control" name="database.database" ng-model="settings.database.database" required>
               <span id="helpBlock" class="help-block">Name of the database.</span>
               </div>
             </div>
             <div class="form-group" ng-if="settings.database.type == 'pg' || settings.database.type == 'mysql' || settings.database.type == 'mssql' || settings.database.type == 'oracledb'">
               <label for="database.username" class="col-xs-4 col-sm-3 control-label">Database Username</label>
               <div class="col-xs-8 col-sm-9">
-              <input type="text" style="color: white;" class="form-control" name="database.username" ng-model="settings.database.username" required>
+              <input type="text" class="form-control" name="database.username" ng-model="settings.database.username" required>
               <span id="helpBlock" class="help-block">Database Username</span>
               </div>
             </div>
@@ -165,10 +165,10 @@
               <label for="database.password" class="col-xs-4 col-sm-3 control-label">Database Password</label>
               <div class="col-xs-8 col-sm-9">
                   <div class="input-group">
-                  <input type="password" style="color: white;" ng-attr-type="{{ showPassword ? 'text' : 'password' }}" class="form-control" name="database.password" ng-model="settings.database.password" required>
+                  <input type="password" ng-attr-type="{{ showPassword ? 'text' : 'password' }}" class="form-control" name="database.password" ng-model="settings.database.password" required>
                   <span class="input-group-addon" id="database.password.addon">
                       <div ng-click="toggleShowPassword()" ng-class="{'fa fa-eye': showPassword,'fa fa-eye-slash': !showPassword}" style="cursor: pointer; pointer-events: all;"></div>
-                  </span>  
+                  </span>
                   </div>
                 <span id="helpBlock" class="help-block">Database Password</span>
                 </div>
@@ -176,7 +176,7 @@
             <div class="form-group" ng-if="settings.database.type == 'mysql'">
               <label for="database.aliasRefreshInterval" class="col-xs-4 col-sm-3 control-label">Alias Refresh CRON</label>
               <div class="col-xs-8 col-sm-9">
-              <input type="text" style="color: white;" class="form-control" name="database.aliasRefreshInterval" ng-model="settings.database.aliasRefreshInterval">
+              <input type="text" class="form-control" name="database.aliasRefreshInterval" ng-model="settings.database.aliasRefreshInterval">
               <span id="helpBlock" class="help-block"><strong>Advanced Users</strong> - The cron timing for Automatic Alias Refresh. See <a href="https://www.npmjs.com/package/node-cron#cron-syntax" target="_blank">Cron Syntax</a>.<br />Default = "0 5,35 * * * *" (The 5th and 35th minute of every hour)</span>
               </div>
             </div> 
@@ -185,7 +185,7 @@
               <div class="col-xs-8 col-xs-offset-2 col-sm-9 col-sm-offset-3">
                 <div class="checkbox">
                 <label>
-                  <input type="checkbox" style="color: white;" name="messages.rotationEnabled" ng-model="settings.messages.rotationEnabled"> Rotate out old messages
+                  <input type="checkbox" name="messages.rotationEnabled" ng-model="settings.messages.rotationEnabled"> Rotate out old messages
                 </label>
                 </div>
               </div>
@@ -193,39 +193,39 @@
             <div class="form-group">
               <label for="messages.rotateDays" class="col-xs-4 col-sm-3 control-label">Rotation interval</label>
               <div class="col-xs-8 col-sm-9">
-              <input type="number" style="color: white;" class="form-control" name="messages.rotateDays" ng-model="settings.messages.rotateDays" ng-disabled="!settings.messages.rotationEnabled">
+              <input type="number" class="form-control" name="messages.rotateDays" ng-model="settings.messages.rotateDays" ng-disabled="!settings.messages.rotationEnabled">
               <span id="helpBlock" class="help-block">Rotate the messages database every {{settings.messages.rotateDays}} days.</span>
               </div>
             </div>
             <div class="form-group">
               <label for="messages.rotateKeep" class="col-xs-4 col-sm-3 control-label">Rotation retention</label>
               <div class="col-xs-8 col-sm-9">
-              <input type="number" style="color: white;" class="form-control" name="messages.rotateKeep" ng-model="settings.messages.rotateKeep" ng-disabled="!settings.messages.rotationEnabled">
+              <input type="number" class="form-control" name="messages.rotateKeep" ng-model="settings.messages.rotateKeep" ng-disabled="!settings.messages.rotationEnabled">
               <span id="helpBlock" class="help-block">Keep {{settings.messages.rotateKeep}} rotated database files.</span>
               <span class="text-warning">Message rotation is not yet implemented</span>
               </div>
             </div>
             </fieldset>
 
-            <h5 style="color: white;">Messages</h5>
+            <h5 >Messages</h5>
             <div class="form-group">
               <label for="messages.maxLimit" class="col-xs-4 col-sm-3 control-label">Max limit per page</label>
               <div class="col-xs-8 col-sm-9">
-              <input  style="color: white;"type="number" class="form-control" name="messages.maxLimit" ng-model="settings.messages.maxLimit">
+              <input type="number" class="form-control" name="messages.maxLimit" ng-model="settings.messages.maxLimit">
               <span id="helpBlock" class="help-block">The maximum number of messages a user can display per page.</span>
               </div>
             </div>
             <div class="form-group">
               <label for="messages.defaultLimit" class="col-xs-4 col-sm-3 control-label">Default limit per page</label>
               <div class="col-xs-8 col-sm-9">
-              <input  style="color: white;"type="number" class="form-control" name="messages.defaultLimit" ng-model="settings.messages.defaultLimit">
+              <input type="number" class="form-control" name="messages.defaultLimit" ng-model="settings.messages.defaultLimit">
               <span id="helpBlock" class="help-block">Default number of messages to show per page.</span>
               </div>
             </div>
             <div class="form-group">
               <label for="messages.iconsize" class="col-xs-4 col-sm-3 control-label">Icon Size</label>
               <div class="col-xs-8 col-sm-9">
-                <select style="color: white; background: #0D1117;" name="messages.iconsize" ng-model="settings.messages.iconsize" class="form-control">
+                <select name="messages.iconsize" ng-model="settings.messages.iconsize" class="form-control">
                   <option value="small">Small</option>
                   <option value="normal">Normal</option>
                 </select>
@@ -237,7 +237,7 @@
               <div class="col-xs-8 col-sm-9">
                 <div class="checkbox">
                 <label>
-                  <input style="color: white;" type="checkbox" name="messages.duplicateFiltering" ng-model="settings.messages.duplicateFiltering"> Filter out duplicate messages
+                  <input type="checkbox" name="messages.duplicateFiltering" ng-model="settings.messages.duplicateFiltering"> Filter out duplicate messages
                 </label>
                 <span id="helpBlock" class="help-block">Limit filtering in one or both of the below fields.</span>
                 </div>
@@ -246,13 +246,13 @@
             <div class="form-group">
               <label for="messages.duplicateLimit" class="col-xs-4 col-sm-3 control-label">Duplicate message limit</label>
               <div class="col-xs-8 col-sm-9">
-              <input style="color: white;" type="number" class="form-control" name="messages.duplicateLimit" ng-model="settings.messages.duplicateLimit" ng-disabled="!settings.messages.duplicateFiltering">
+              <input type="number" class="form-control" name="messages.duplicateLimit" ng-model="settings.messages.duplicateLimit" ng-disabled="!settings.messages.duplicateFiltering">
               </div>
             </div>
             <div class="form-group">
               <label for="messages.duplicateLimit" class="col-xs-4 col-sm-3 control-label">Duplicate time limit</label>
               <div class="col-xs-8 col-sm-9">
-              <input style="color: white;" type="number" class="form-control" name="messages.duplicateTime" ng-model="settings.messages.duplicateTime" ng-disabled="!settings.messages.duplicateFiltering">
+              <input type="number" class="form-control" name="messages.duplicateTime" ng-model="settings.messages.duplicateTime" ng-disabled="!settings.messages.duplicateFiltering">
               <span id="helpBlock" class="help-block">Ignore a message if one of the last {{settings.messages.duplicateLimit}} messages in the past {{settings.messages.duplicateTime}} seconds contains the same address and content.
                   <br />Set to 0 or blank to not limit the duplicate check query. This can impact database performance if both this and the above field are blank.</span>
               </div>
@@ -286,7 +286,7 @@
                 <label>
                 <input type="checkbox" name="messages.HideCapcode" ng-model="settings.messages.HideCapcode">
                 Hide Capcodes for non-logged in users. 
-			<br><b> Note: You must restart the application after making this change.</b>
+            <br><b> Note: You must restart the application after making this change.</b>
                 </label>
               </div>
               </div>
@@ -322,13 +322,13 @@
               In <strong>Label</strong> mode, the text is not highlighted, but tooltips are visible when hovering over matched text (if a label is present).<br />
               In <strong>Highlight</strong> mode, the text is highlighted, and tooltips are visible when hovering over matched text (if a label is present).<br />
               In <strong>Replace</strong> Mode, the replacement can be text, or a regex replacement consisting of groups (eg: &#x3C;a href=&#x22;?q=$1&#x22;&#x3E;$2&#x3C;/a&#x3E;)<br />
-              <strong style="color:black;">Note: Reordering rows may help when you have many complex regex replacements.</strong></span>
+              <strong>Note: Reordering rows may help when you have many complex regex replacements.</strong></span>
             </div>
             </div>
             <div class="form-group">
               <div class="col-sm-11 col-sm-offset-1">
               <table class="table table-striped table-condensed">
-                <thead>
+                <thead class="thead-default">
                   <tr>
                     <th width="1%"></th>
                     <th width="44%">Text/Regex Match</th>
@@ -340,18 +340,18 @@
                 <tbody sv-root sv-part="settings.messages.replaceText" class="textMatchTable">
                   <tr ng-repeat="text in settings.messages.replaceText track by $index" sv-element="{containment:'.textMatchTable'}">
                     <td style="text-align: center; vertical-align: middle;">
-                      <input style="color:white;" type="checkbox" ng-model="text.selected"/></td>
+                      <input type="checkbox" ng-model="text.selected"/></td>
                     <td>
-                      <input style="color:white;" type="text" class="form-control" placeholder="Text/Regex Match" ng-model="text.match" required></td>
+                      <input type="text" class="form-control" placeholder="Text/Regex Match" ng-model="text.match" required></td>
                     <td style="text-align: center; vertical-align: middle;">
-                      <select style="color:white;" class="form-control" ng-model="text.highlight">
+                      <select class="form-control" ng-model="text.highlight">
                         <option value="">Label</option>
                         <option value="true">Highlight</option>
                         <option value="replace">Replace</option>
                       </select>
                     </td>
                     <td>
-                      <input style="color:white;" type="text" class="form-control" placeholder="Label/Regex Replacement" ng-model="text.replace" ></td>
+                      <input type="text" class="form-control" placeholder="Label/Regex Replacement" ng-model="text.replace" ></td>
                      <td style="font-size: 13pt;cursor:move;text-align: center; vertical-align: middle;" title="Drag to reorder" sv-handle>
                       <i class="fas fa-bars"></i></td>
                   </tr>
@@ -380,7 +380,7 @@
             <div class="form-group">
               <div class="col-sm-11 col-sm-offset-1">
               <table class="table table-striped table-condensed">
-                <thead>
+                <thead class="thead-default">
                   <tr>
                     <th width="1%"></th>
                     <th width="25%">Name</th>
@@ -395,13 +395,13 @@
                     <td style="text-align: center; vertical-align: middle;">
                       <input type="checkbox" ng-model="template.selected"/></td>
                     <td>
-                      <input style="color:white;" type="text" class="form-control" placeholder="Template Name" ng-model="template.name" ng-required="template.agency || template.icon || template.color"></td>
+                      <input type="text" class="form-control" placeholder="Template Name" ng-model="template.name" ng-required="template.agency || template.icon || template.color"></td>
                     <td>
-                      <input style="color:white;" type="text" class="form-control" placeholder="Template Agency" ng-model="template.agency" ng-required="template.name || template.icon || template.color"></td>
+                      <input type="text" class="form-control" placeholder="Template Agency" ng-model="template.agency" ng-required="template.name || template.icon || template.color"></td>
                     <td>
-                      <input style="color:white;" type="text" class="form-control" placeholder="Template Icon" ng-model="template.icon" ng-required="template.agency || template.name || template.color"></td>
+                      <input type="text" class="form-control" placeholder="Template Icon" ng-model="template.icon" ng-required="template.agency || template.name || template.color"></td>
                     <td>
-                      <input style="color:white;" type="text" class="form-control" placeholder="Template Color" ng-model="template.color" ng-required="template.agency || template.icon || template.name"></td>
+                      <input type="text" class="form-control" placeholder="Template Color" ng-model="template.color" ng-required="template.agency || template.icon || template.name"></td>
                     <td style="text-align: center; vertical-align: middle;">
                       <input type="checkbox" ng-model="template.filter"/></td>
                   </tr>
@@ -422,7 +422,7 @@
               </div>
             </div>
 
-            <h5 style="color: white;">Auth</h5>
+            <h5 >Auth</h5>
             <div class="form-group">
               <label for="auth.registration" class="col-xs-4 col-sm-3 control-label">Type</label>
               <div class="col-xs-8 col-sm-9">
@@ -440,7 +440,7 @@
             <div class="form-group">
               <div class="col-sm-11 col-sm-offset-1">
               <table class="table table-striped table-condensed">
-                <thead>
+                <thead class="thead-default">
                   <tr>
                     <th width="1%"></th>
                     <th width="25%">Name</th>
@@ -453,9 +453,9 @@
                     <td style="text-align: center; vertical-align: middle;">
                       <input type="checkbox" ng-model="key.selected"/></td>
                     <td>
-                      <input style="color:white;" type="text" class="form-control" placeholder="Name" ng-model="key.name" required></td>
+                      <input type="text" class="form-control" placeholder="Name" ng-model="key.name" required></td>
                     <td colspan="{{key.key ? '2' : '1'}}">
-                      <input style="color:white;" type="text" class="form-control" placeholder="Key" ng-model="key.key" readonly required></td>
+                      <input type="text" class="form-control" placeholder="Key" ng-model="key.key" readonly required></td>
                     <td ng-if="key.key == ''">
                       <button class="btn btn-default" ng-click="generateKey($index)" type="button">Generate</button>
                     </td>
@@ -475,7 +475,7 @@
               </div>
             </div>
 
-            <h5 style="color: white;">Monitoring</h5>
+            <h5 >Monitoring</h5>
             <div class="form-group">
               <label for="monitoring.azureEnable" class="col-xs-4 col-sm-3 control-label">Azure Application Insights</label>
               <div class="col-xs-8 col-sm-9">
@@ -514,11 +514,11 @@
 
 
 
-            <h4 style="color: white;">Plugins</h4>
+            <h4 >Plugins</h4>
             <div class="plugin-group" ng-repeat="plugin in plugins">
               <hr />
               <div class="row">
-                <div class="col-xs-12 col-sm-6"><h5 style="color: white;">{{plugin.name}}</h5><p><em ng-bind-html="plugin.description"></em></p></div>
+                <div class="col-xs-12 col-sm-6"><h5 >{{plugin.name}}</h5><p><em ng-bind-html="plugin.description"></em></p></div>
               </div>
               <div class="form-group">
                 <label for="{{plugin.name}}.enable" class="col-xs-4 col-sm-3 control-label">Enable</label>
