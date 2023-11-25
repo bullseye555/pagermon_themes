@@ -15,7 +15,7 @@
             <div class="form-group">
               <label for="global.loglevel" class="col-xs-4 col-sm-3 control-label">Log level</label>
               <div class="col-xs-8 col-sm-9">
-                <select name="global.loglevel" ng-model="settings.global.loglevel" class="form-control">
+                <select name="global.loglevel" ng-model="settings.global.loglevel" class="form-control-select">
                   <option value="debug">Debug</option>
                   <option value="info">Info</option>
                   <option value="warn">Warning</option>
@@ -26,7 +26,7 @@
             <div class="form-group">
               <label for="global.theme" class="col-xs-4 col-sm-3 control-label">Theme</label>
               <div class="col-xs-8 col-sm-9">
-                <select name="global.theme" ng-model="settings.global.theme" class="form-control" >
+                <select name="global.theme" ng-model="settings.global.theme" class="form-control-select" >
                   <option ng-repeat="theme in themes" value="{{theme}}"">{{theme}}</option>
                 </select>
                 <span id="helpBlock" class="help-block">Choose an installed theme. Note: An application restart is required. </span>
@@ -55,7 +55,7 @@
             <div class="form-group">
               <label for="global.searchLocation" class="col-xs-4 col-sm-3 control-label">Homepage Search Bar Location</label>
               <div class="col-xs-8 col-sm-9">
-                <select name="global.searchLocation" ng-model="settings.global.searchLocation" class="form-control">
+                <select name="global.searchLocation" ng-model="settings.global.searchLocation" class="form-control-select">
                   <option value="top">Top</option>
                   <option value="bottom">Bottom</option>
                 </select>
@@ -110,7 +110,7 @@
             <div class="form-group">
               <label for="database.type" class="col-xs-4 col-sm-3 control-label">Type</label>
               <div class="col-xs-8 col-sm-9">
-                <select name="database.type" ng-model="settings.database.type" class="form-control" required>
+                <select name="database.type" ng-model="settings.database.type" class="form-control-select" required>
                   <option value="sqlite3">SQLite</option>
                   <option value="mysql">MySQL / MariaDB</option>
                   <option value="oracledb">Oracle DB</option>
@@ -225,7 +225,7 @@
             <div class="form-group">
               <label for="messages.iconsize" class="col-xs-4 col-sm-3 control-label">Icon Size</label>
               <div class="col-xs-8 col-sm-9">
-                <select name="messages.iconsize" ng-model="settings.messages.iconsize" class="form-control">
+                <select name="messages.iconsize" ng-model="settings.messages.iconsize" class="form-control-select">
                   <option value="small">Small</option>
                   <option value="normal">Normal</option>
                 </select>

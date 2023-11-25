@@ -103,11 +103,16 @@ select {
     }
 }
 
+.form-control-select {
+    color: white;
+	background-color: #373737;
+}
+
 .form-control {
     color: white;
 }
 
-.form-control[disabled], fieldset[disabled] .form-control {
+.form-control[disabled], fieldset[disabled] .form-control, .form-control-select[disabled], fieldset[disabled] .form-control-select {
     color: #bababa;
     background-color: #444444;
 }
