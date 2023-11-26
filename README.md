@@ -39,5 +39,11 @@ Download the complete folder [here](https://download-directory.github.io/?url=ht
 * Don't forget to SAVE and then Restart Pagermon for the theme to take effect
   * ![image](https://github.com/bullseye555/pagermon_themes/assets/28804763/d0876600-db82-49e3-ab81-d6524182c2e3)
 
-## Any bugs?
+## Instructions - Downloading only specific themes
+This uses svn, if you don't have svn download using your desired package manager (eg. sudo apt-get install subversion)
+svn export https://github.com/bullseye555/pagermon_themes/trunk/[SUB FOLDER NAME HERE]
+
+Example https://github.com/bullseye555/pagermon_themes/trunk/dark-mode
+
+# Any bugs?
 If you find a bug, or something just _isn't quite right_ either reach out to me via the [Pagermon Discord](https://discord.gg/TXezVhRa) or raise an issue here on GitHub 
