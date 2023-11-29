@@ -6,7 +6,7 @@ Alters the layout of Pagermon when on smaller screens so that the Date, Time, Ic
 
 ![image](https://github.com/bullseye555/pagermon_themes/assets/28804763/4f7d28d0-fb56-4632-bf66-a66dc9f8a06e)
 
-Download the complete folder [here](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fbullseye555%2Fpagermon_themes%2Ftree%2Fmain%2FCompact%2520Default) (Download function provided by external website [download-directory.github.io](download-directory.github.io)). This will download the full folder as a ZIP file. Be sure to unzip if before uploading to Pagermon!
+Download the complete folder [here](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fbullseye555%2Fpagermon_themes%2Ftree%2Fmain%2Fcompact-default) (Download function provided by external website [download-directory.github.io](download-directory.github.io)). This will download the full folder as a ZIP file. Be sure to unzip if before uploading to Pagermon!
 
 ### Dark Mode (uses the Pagermon Default Layout as at 0.3.13)
 Changes the colour theme of the Paremon Default Layout to a Dark Mode
@@ -16,12 +16,12 @@ Example showing _Highlight_ (@@ALERT 00404 SF 2A) and _Label_ (F231129406)  high
 ![image](https://github.com/bullseye555/pagermon_themes/assets/28804763/299d7713-a228-4e69-b9ff-858f6fd2ea87)
 ![image](https://github.com/bullseye555/pagermon_themes/assets/28804763/25720c19-cba4-4619-ba32-1553779b7ae0)
 
-Download the complete folder [here](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fbullseye555%2Fpagermon_themes%2Ftree%2Fmain%2FDark%2520Mode) (Download function provided by external website [download-directory.github.io](download-directory.github.io)). This will download the full folder as a ZIP file. Be sure to unzip if before uploading to Pagermon!
+Download the complete folder [here](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fbullseye555%2Fpagermon_themes%2Ftree%2Fmain%2Fdark-mode) (Download function provided by external website [download-directory.github.io](download-directory.github.io)). This will download the full folder as a ZIP file. Be sure to unzip if before uploading to Pagermon!
 
 ### Dark Compact Mode 
 Combines the Compact and Dark Modes above
 
-Download the complete folder [here](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fbullseye555%2Fpagermon_themes%2Ftree%2Fmain%2FCompact%2520Dark%2520Mode) (Download function provided by external website [download-directory.github.io](download-directory.github.io)). This will download the full folder as a ZIP file. Be sure to unzip if before uploading to Pagermon!
+Download the complete folder [here](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fbullseye555%2Fpagermon_themes%2Ftree%2Fmain%2Fcompact-dark-mode) (Download function provided by external website [download-directory.github.io](download-directory.github.io)). This will download the full folder as a ZIP file. Be sure to unzip if before uploading to Pagermon!
 #### Compact: 
 ![image](https://github.com/bullseye555/pagermon_themes/assets/28804763/a6834141-596f-4d08-99a0-83660c49ae3b)
 
