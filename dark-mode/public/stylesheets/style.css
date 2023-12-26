@@ -119,7 +119,7 @@ a {
 }
 
 a:hover, a:focus {
-    color: rgb(201, 83, 14);
+    color: rgb(255, 255, 255);
 }
 
 .navbar {
