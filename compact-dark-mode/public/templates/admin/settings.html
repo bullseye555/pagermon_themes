@@ -542,7 +542,7 @@
                       </label>
                     </div>
                     <div ng-if="configItem.type == 'select'">
-                        <select name="{{plugin.name}}.{{configItem.name}}" ng-model="settings.plugins[plugin.name][configItem.name]" class="form-control" ng-options="obj.text for obj in configItem.options track by obj.value" ng-hide="!settings.plugins[plugin.name].enable" ng-required="settings.plugins[plugin.name].enable && configItem.required">
+                        <select name="{{plugin.name}}.{{configItem.name}}" ng-model="settings.plugins[plugin.name][configItem.name]" class="form-control-select" ng-options="obj.text for obj in configItem.options track by obj.value" ng-hide="!settings.plugins[plugin.name].enable" ng-required="settings.plugins[plugin.name].enable && configItem.required">
                           </select>
                           <span id="helpBlock" class="help-block">{{configItem.description}}</span>
                     </div>
