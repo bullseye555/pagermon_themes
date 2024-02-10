@@ -27,6 +27,8 @@
     overflow: auto;
     font-family: inherit;
     font-size: 100%;
+	color: white;
+	min-width: 100%;
 }
 
 .ta-scroll-window.form-control {
