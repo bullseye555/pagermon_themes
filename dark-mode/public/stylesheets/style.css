@@ -6,7 +6,7 @@
 
 #wrap {
     background: #373737;
-    colour: white;
+    color: white;
 }
 
 #helpBlock, p {
@@ -21,7 +21,7 @@
     background-color: #373737;
 }
 
-h1, h2, h3, h4, h5, label, input, .thead-default {
+h1, h2, h3, h4, h5, h6, label, input, .thead-default {
     color: white;
 }
 
