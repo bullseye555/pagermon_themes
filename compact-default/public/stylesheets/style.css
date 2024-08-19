@@ -57,9 +57,13 @@ td.clickable-td:hover, td.clickable-td:focus, td.clickable-td:focus:hover {
   display: none !important;
 }
 
+.rowhead {
+    margin-left: 0px;
+    margin-right: 0px
+}
 /* Bootstrap overrides */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .form-horizontal .control-label {
         text-align: right;
         margin-bottom: 0;
@@ -297,22 +301,35 @@ table .expand {
     margin-bottom: 15px;
     }
 }
-@media screen and (max-device-width: 768px) {
+
+@media screen and (max-device-width: 767px) {
     table .noMobile {
         display: none;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+    table .noMobile {
+        display: none;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width: 1365px) {
     table .noSmall {
         display: none;
     }
 }
 
-@media screen and (min-width:768px) {
-	table .noLarge {
-		display: none;
-	}
+@media screen and (min-device-width:768px) and (max-device-width: 1365px) {
+    table .noSmall {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1366px) {
+    table .noLarge {
+        display: none;
+    }
 }
 
 /* Pagination */
@@ -392,7 +409,7 @@ table .expand {
     border-top: 30px solid FireBrick;
 }
 
-.triangle-down p{  
+.triangle-down p{
   text-align:center;
   color:MistyRose;
   margin-top:-33px;
