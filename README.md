@@ -5,14 +5,14 @@
 Alters the layout of Pagermon when on smaller screens so that the Date, Time, Icon, and Agency are all in the same column, and adds the Alias to the end of the message. 
 
 #### Mobile Mode 
-(Applies to screens upto 767px in resolution)
+(Applies to browser windows upto 767px in resolution)
 
 There is no difference in the _Logged In_ view vs the _Logged Out_ view
 ![image](https://github.com/user-attachments/assets/e6d8a9f9-c508-4845-9290-61134b4b2279)
 
 
 #### Small Mode 
-(Applies to screens from 768px to 1365px in resolution)
+(Applies to browser windows from 768px to 1365px in resolution)
 
 _Logged In_ view (or where _Source_ and _Capcode_ are publicly displayed)
 ![image](https://github.com/user-attachments/assets/0b1de178-8768-467f-adbf-02d8af5b0c6e)
