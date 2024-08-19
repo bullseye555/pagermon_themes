@@ -2,9 +2,24 @@
 ## Additional Pagermon Themes
 
 ### Compact Mode (uses the Pagermon Colour Scheme as at 0.3.13)
-Alters the layout of Pagermon when on smaller screens so that the Date, Time, Icon, and Agency are all in the same column, and adds the Alias to the end of the message
+Alters the layout of Pagermon when on smaller screens so that the Date, Time, Icon, and Agency are all in the same column, and adds the Alias to the end of the message. 
 
-![image](https://github.com/bullseye555/pagermon_themes/assets/28804763/4f7d28d0-fb56-4632-bf66-a66dc9f8a06e)
+#### Mobile Mode 
+(Applies to screens upto 767px in resolution)
+
+There is no difference in the _Logged In_ view vs the _Logged Out_ view
+![image](https://github.com/user-attachments/assets/e6d8a9f9-c508-4845-9290-61134b4b2279)
+
+
+#### Small Mode 
+(Applies to screens from 768px to 1365px in resolution)
+
+_Logged In_ view (or where _Source_ and _Capcode_ are publicly displayed)
+![image](https://github.com/user-attachments/assets/0b1de178-8768-467f-adbf-02d8af5b0c6e)
+
+_Logged Out_ view (or where _Source_ and _Capcode_ are not **publicly** displayed)
+![image](https://github.com/user-attachments/assets/6f1be46f-773f-4276-9105-b5b7a48a4bbc)
+
 
 Download the complete folder [here](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fbullseye555%2Fpagermon_themes%2Ftree%2Fmain%2Fcompact-default) (Download function provided by external website [download-directory.github.io](download-directory.github.io)). This will download the full folder as a ZIP file. Be sure to unzip if before uploading to Pagermon!
 
@@ -22,14 +37,6 @@ Download the complete folder [here](https://download-directory.github.io/?url=ht
 Combines the Compact and Dark Modes above
 
 Download the complete folder [here](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fbullseye555%2Fpagermon_themes%2Ftree%2Fmain%2Fcompact-dark-mode) (Download function provided by external website [download-directory.github.io](download-directory.github.io)). This will download the full folder as a ZIP file. Be sure to unzip if before uploading to Pagermon!
-#### Compact: 
-![image](https://github.com/bullseye555/pagermon_themes/assets/28804763/a6834141-596f-4d08-99a0-83660c49ae3b)
-
-
-#### Full size:
-
-![image](https://github.com/bullseye555/pagermon_themes/assets/28804763/c34f3804-a36f-4344-bcdc-b636fe197712)
-
 
 # Instructions
 * Download the entire folder and add into pagermon\server\themes
