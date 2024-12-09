@@ -348,7 +348,7 @@ table .expand {
 }
 
 td.clickable-td:hover, td.clickable-td:focus, td.clickable-td:focus:hover {
-    background: #f85959;
+    background: #fbeded;
     cursor: pointer;
     filter: brightness(85%);
 }
