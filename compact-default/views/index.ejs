@@ -92,25 +92,30 @@
       <table class="table table-condensed table-hover valign">
         <thead class="thead-default">
           <tr>
-            <!-- Date & Time Columns header row, do not display for 'Mobile' displays, span across 2 colums. No Column Header text  -->
-            <th class="noMobile noSmall" colspan="2">
-            <!-- Date Column & Time column header row, only display for 'Mobile' displays, span across 1 column. No Column Header text -->
-            <th class="noLarge">
+            <!-- Date & Time Columns header row, do not display for 'Mobile' and 'Small' displays, span across 2 colums -->
+                <th class="noMobile noSmall" colspan="2">Date & Time
+                <!-- Date Column & Time column header row, only display for 'Small' displays, span across 1 column -->
+                <th class="noLarge noMobile"> Date & Time
+                <!-- Date Column & Time column header row, only display for 'Mobile' displays, span across 1 column -->
+                <th class="noLarge noSmall"> Date, Time, Agency
             </th>
-			<!-- If HideSource is disabled, or the login user role is an admin, show the Source column header row. Do not display for Mobile displays -->
+            <!-- If HideSource is disabled, or the login user role is an admin, show the Source column header row. Do not display for Mobile displays -->
             <% if (!hidesource || (login && user.role == 'admin')) { %>
-              <th class="noMobile" style="text-align: center; ">Src</th>
+              <th class="noMobile" style="text-align: center; ">Source</th>
             <% } %>
-			<!-- If HideCapcode is disabled, or the login user role is an admin, show the Capcode column header row. Do not display for Mobile displays -->
+            <!-- If HideCapcode is disabled, or the login user role is an admin, show the Capcode column header row. Do not display for Mobile displays -->
             <% if (!hidecapcode || (login && user.role == 'admin')) { %>
               <th class="noMobile" style="text-align: center; ">Capcode</th>
             <% } %>
-			<!-- Icon Column header row. Do not display for Mobile displays. No Column Header text -->
-            <th class="noMobile"></th>
-			<!-- Agency Column header row. Do not display for Mobile and Small displays. No Column Header text -->
-            <th class="noMobile noSmall"></th>
-			<!-- Message Column header row -->
-            <th style="text-align: center; ">Message
+            <!-- Icon & Agency Column header row. Do not display for Mobile displays. -->
+            <th class="noMobile noSmall">Agency
+              <!-- Icon & Agency Column header row. Do not display for Mobile displays. -->
+                <th class="noMobile noLarge">Agency & Alias
+            <!-- Alias Column header row. Do not display for Mobile and Small displays. No Column Header text -->
+            <th class="noMobile noSmall">Alias</th>
+            <!-- Message Column header row -->
+            <th class="noMobile" style="text-align: center;">Message
+            <th class="noLarge noSmall" style="text-align: center;">Message & Alias
               <span ng-if="filter || hasQuery" class="pull-left" style="vertical-align: middle; padding-right: 10px;">
                   <strong>Filter:</strong> <a ng-href="/" style="margin-bottom: 3px;" class="btn btn-primary btn-xs">{{filter || origQuery}} <i class="fa fa-fw fa-times"></i></a>
               </span></th>
@@ -118,90 +123,88 @@
         </thead>
         <tbody>
           <tr ng-repeat="message in messages | filter: search">
-            <!-- In non-Compact Mode, display the Date Column -->
+            <!-- DATE COLUMN - Only show in Large mode-->
             <td class="shrink noMobile noSmall">{{message.date}}</td>
-            <!-- Time Column -->
+            <!-- TIME COLUMN - Show in all Modes. Display in column varies by more -->
             <td class="shrink" style="text-align: center;" style="font-weight: bold; text-align: center;">
-					<!-- In Compact Modes, display the Date and add a line break -->
-					<div class="noLarge" style="text-align: center;">{{message.date}}</div>
-					<!-- Display the Time in all Display Modes -->
-					<div style=" text-align: center;">{{message.timestamp}}</div>
-					<!-- In Mobile Mode add Icon and Agency to the Time field-->
-					<div class="noLarge noSmall">
-					<!-- Capcode Alias Icon -->
-					  <% if (iconsize == 'small') { %>
-					  <span class="fa-stack fa-fw" style="color: {{message.color || 'grey'}};">
-					  <% } else { %>
-					  <span class="fa-stack fa-lg fa-fw" style="color: {{message.color || 'grey'}};">
-					  <% } %>
-						<i class="fa fa-circle fa-stack-2x"></i>
-						<i ng-if="message.icon" class="fa fa-{{message.icon}} fa-stack-1x fa-inverse"></i>
-						<i ng-if="!message.icon" class="fa fa-question fa-stack-1x fa-inverse"></i>
-					  </span>
-					<!-- In Mobile Mode and if there is an agency, display the agency and enable the popup to filter by alias -->
-					  <span style=" vertical-align: middle;" ng-if="message.agency" uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'agency'" popover-trigger="'outsideClick'"><br><strong>{{message.agency || ''}}</strong> </span>
-					 <!-- In Mobile Mode and if there is no agency, display Unknown -->
-					  <span style=" vertical-align: middle;" ng-if="!message.agency"><br><strong>{{message.agency || 'Unknown' }}</strong> </span>
-					  </div>
+                    <!-- In Mobile Mode, display the Date and add a line break -->
+                    <div class="noLarge" style="text-align: center;">{{message.date}}</div>
+                    <!-- Display the Time in all Display Modes -->
+                    <div style=" text-align: center;">{{message.timestamp}}</div>
+                    <!-- In Mobile Mode add Icon and Agency to the Time field-->
+                    <div class="noLarge noSmall">
+                    <!-- Capcode Alias Icon -->
+                      <% if (iconsize == 'small') { %>
+                      <span class="fa-stack fa-fw" style="color: {{message.color || 'grey'}};">
+                      <% } else { %>
+                      <span class="fa-stack fa-lg fa-fw" style="color: {{message.color || 'grey'}};">
+                      <% } %>
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i ng-if="message.icon" class="fa fa-{{message.icon}} fa-stack-1x fa-inverse"></i>
+                        <i ng-if="!message.icon" class="fa fa-question fa-stack-1x fa-inverse"></i>
+                      </span>
+                    <!-- In Mobile Mode and if there is an agency, display the agency and enable the popup to filter by alias -->
+                      <span style=" vertical-align: middle;" ng-if="message.agency" uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'agency'" popover-trigger="'outsideClick'"><br><strong>{{message.agency || 'Unknown'}}</strong> </span>
+                     <!-- In Mobile Mode and if there is no agency, display Unknown -->
+                      <span style=" vertical-align: middle;" ng-if="!message.agency"><br><strong>{{message.agency || 'Unknown' }}</strong> </span>
+                      </div>
               </td>
-            <!-- In non-Mobile mode and if a logged in user or source is being displayed to all users, then display the Source -->
+
+           <!-- SOURCE COLUMN - In non-Mobile mode and if a logged in user or source is being displayed to all users, then display the Source -->
             <% if (!hidesource || (login && user.role == 'admin')) { %>
               <td class="shrink noMobile clickable-td" uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'source'" popover-trigger="'outsideClick'" style="background-color: {{message.color || 'grey'}}; text-align: center;">
                 <span class="small" style="color: white; font-family: monospace;"><strong>{{message.source}}</strong></span>
               </td>
             <% } %>
-            <!-- In non-Mobile mode and if a logged in user or source is being displayed to all users, then display the Capcode Address -->
+			
+            <!-- CAPCODE COLUMN - In non-Mobile mode and if a logged in user or source is being displayed to all users, then display the Capcode Address -->
             <% if (!hidecapcode || (login && user.role == 'admin')) { %>
               <td class="shrink noMobile clickable-td" uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'address'" popover-trigger="'outsideClick'" style="background-color: {{message.color || 'grey'}}; text-align: center;">
                 <span class="small" style="color: white; font-family: monospace;"><strong>{{message.address}}</strong></span>
               </td>
             <% } %>
-            <!-- Icon & Agency column -->
-            <td class="shrink clickable-td noMobile" ng-if="message.agency" uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'agency'" popover-trigger="'outsideClick'">
-              <!-- In non-Mobile mode and if there is an agency, show the Icon & Agency and enable the popup to filter by agency -->
-			  <div class="noMobile">
-			  <% if (iconsize == 'small') { %>
-              <span class="fa-stack fa-fw" style="color: {{message.color || 'grey'}};">
-              <% } else { %>
-              <span class="fa-stack fa-lg fa-fw" style="color: {{message.color || 'grey'}};">
-              <% } %>
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i ng-if="message.icon" class="fa fa-{{message.icon}} fa-stack-1x fa-inverse"></i>
-                <i ng-if="!message.icon" class="fa fa-question fa-stack-1x fa-inverse"></i>
-              </span>
-              <strong style="vertical-align: middle;">{{message.agency || ''}}</strong>
-			  </div>
-              <!-- In Small mode only (not Mobile) and if there is an agency, show the Icon & Agency and enable the popup to filter by agency -->
-              <span class="shrink noLarge noMobile" style="color: {{message.color || 'grey'}}; text-align: center;" ng-if="message.alias" uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'alias'" popover-trigger="'outsideClick'">{{message.alias || ''}}</span>
+			
+            <!-- Icon & Agency Column - Column displayed in Small & Large modes -->
+            <td class="shrink clickable-td noMobile">
+                <!-- All modes, Show the Icon & Agency-->
+                    <div class="noMobile">
+                    <% if (iconsize == 'small') { %>
+                    <span class="fa-stack fa-fw" style="color: {{message.color || 'grey'}};">
+                    <% } else { %>
+                    <span class="fa-stack fa-lg fa-fw" style="color: {{message.color || 'grey'}};">
+                    <% } %>
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i ng-if="message.icon" class="fa fa-{{message.icon}} fa-stack-1x fa-inverse"></i>
+                      <i ng-if="!message.icon" class="fa fa-question fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span ng-if="message.agency" uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'agency'" popover-trigger="'outsideClick'"> <strong style="color: {{message.color || 'grey'}};" style="vertical-align: middle;">{{message.agency || 'Unknown'}}</strong> </span>
+                    <span ng-if="!message.agency" ><strong style="color: {{message.color || 'grey'}};" style="vertical-align: middle;">{{message.agency || 'Unknown'}}</strong> </span>
+                    </div>
+                <!-- In Small Mode, show the Agency -->
+                  <!-- Has an agency -->
+                    <span class="shrink noLarge noMobile" style="color: {{message.color || 'grey'}}; text-align: center;" ng-if="message.alias" uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'alias'" popover-trigger="'outsideClick'">{{message.alias || 'Unknown'}}</span>
+                  <!-- Doesn't have an agency -->
+                   <!-- Only display the Popup if user is logged in and an administrator -->
+                    <% if ((login && user.role == 'admin')) { %>
+                    <span ng-if="!message.alias" class="shrink noLarge noMobile" uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'alias'" popover-trigger="'outsideClick'" style="color: {{message.color || 'grey'}}; text-align: center;" >{{message.alias || 'Unknown'}}</span>
+                    <% } else { %>
+                    <span ng-if="!message.alias" class="shrink noLarge noMobile" style="color: {{message.color || 'grey'}}; text-align: center;" >{{message.alias || 'Unknown'}}</span>
+                    <% } %>
             </td>
-            <!-- In non-Compact mode and if there is no agency, show the Icon only -->
-            <td class="shrink noMobile noSmall" ng-if="!message.agency">
-              <% if (iconsize == 'small') { %>
-              <span class="fa-stack fa-fw" style="color: {{message.color || 'grey'}};">
-              <% } else { %>
-              <span class="fa-stack fa-lg fa-fw" style="color: {{message.color || 'grey'}};">
-              <% } %>
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i ng-if="message.icon" class="fa fa-{{message.icon}} fa-stack-1x fa-inverse"></i>
-                <i ng-if="!message.icon" class="fa fa-question fa-stack-1x fa-inverse"></i>
-              </span>
-              <strong style="vertical-align: middle;"></strong>
+            
+            <!-- ALIAS COLUMN - Large mode only  -->
+            <td class="shrink clickable-td noMobile noSmall">
+              <span uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'alias'" popover-trigger="'outsideClick'" style="color: {{message.color || 'grey'}}; text-align: center;" ng-if="message.agency">{{message.alias || 'Unknown'}}</span>
+              <span style="color: {{message.color || 'Maroon'}};" ng-if="!message.agency">{{message.alias || 'Unknown'}}</span>
             </td>
-            <!-- In non-Compact Mode and if a logged in user, Display the Alias and enable popup to add filter by/add an alias  -->
-            <td class="shrink noMobile noSmall clickable-td" ng-if="user"
-                uib-popover-template="'templates/popover.html'" popover-append-to-body=true
-                ng-click="popoverEl = 'alias'" popover-trigger="'outsideClick'">
-              <span style="color: {{message.color || 'Maroon'}};">{{message.alias || 'Unknown'}}</span>
-            </td>
-            <!-- In non-Compact Mode and not a logged in user, Display the alias only  -->
-            <td class="shrink noMobile noSmall" ng-if="!user">
-              <span>{{message.alias || ''}}</span>
-            </td>
+            
+            <!-- MESSAGE Column - All modes -->
             <td class="expand">
             <!-- Display the message for all display modes -->
               <div highlight="message.message" replacement="init.replaceText" class="pagerMessage"></div>
             <!-- In Mobile Mode, add a line break and display the alias and enable popup to filter by alias-->
-              <span class="shrink noLarge noSmall" style="color: {{message.color || 'grey'}};" ng-if="message.alias" uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'alias'" popover-trigger="'outsideClick'">{{message.alias || ''}}</span>
+              <span class="shrink noLarge noSmall" uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'alias'" popover-trigger="'outsideClick'" style="color: {{message.color || 'grey'}}; text-align: center;" ng-if="message.agency">{{message.alias || 'Unknown'}}</span>
+              <span class="shrink noLarge noSmall" style="color: {{message.color || 'grey'}};" ng-if="!message.agency">{{message.alias || 'Unknown'}}</span>
             </td>
         </tbody>
       </table>
