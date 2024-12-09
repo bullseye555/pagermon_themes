@@ -195,7 +195,11 @@
             <!-- ALIAS COLUMN - Large mode only  -->
             <td class="shrink clickable-td noMobile noSmall">
               <span uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'alias'" popover-trigger="'outsideClick'" style="color: {{message.color || 'grey'}}; text-align: center;" ng-if="message.agency">{{message.alias || 'Unknown'}}</span>
+              <% if ((login && user.role == 'admin')) { %>
+			  <span uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'alias'" popover-trigger="'outsideClick'" style="color: {{message.color || 'Maroon'}}; text-align: center;" ng-if="!message.agency">{{message.alias || 'Unknown'}}</span>
+			  <% } else { %>
               <span style="color: {{message.color || 'Maroon'}};" ng-if="!message.agency">{{message.alias || 'Unknown'}}</span>
+			  <% } %>
             </td>
             
             <!-- MESSAGE Column - All modes -->
@@ -204,7 +208,11 @@
               <div highlight="message.message" replacement="init.replaceText" class="pagerMessage"></div>
             <!-- In Mobile Mode, add a line break and display the alias and enable popup to filter by alias-->
               <span class="shrink noLarge noSmall" uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'alias'" popover-trigger="'outsideClick'" style="color: {{message.color || 'grey'}}; text-align: center;" ng-if="message.agency">{{message.alias || 'Unknown'}}</span>
-              <span class="shrink noLarge noSmall" style="color: {{message.color || 'grey'}};" ng-if="!message.agency">{{message.alias || 'Unknown'}}</span>
+              <% if ((login && user.role == 'admin')) { %>
+			  <span uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'alias'" popover-trigger="'outsideClick'" style="color: {{message.color || 'Maroon'}}; text-align: center;" ng-if="!message.agency">{{message.alias || 'Unknown'}}</span>
+			  <% } else { %>
+              <span style="color: {{message.color || 'Maroon'}};" ng-if="!message.agency">{{message.alias || 'Unknown'}}</span>
+			  <% } %>
             </td>
         </tbody>
       </table>
