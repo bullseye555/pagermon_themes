@@ -1,3 +1,9 @@
+/* Bullseye custom content */
+#paypal {
+	color: blue;
+	vertical-align: middle; 
+}
+
 .loading {
  pointer-events: all;
  z-index: 99999;
