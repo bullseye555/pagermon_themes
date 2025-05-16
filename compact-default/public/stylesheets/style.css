@@ -226,7 +226,7 @@ a:hover, a:focus {
     padding: 5px 7.5px;
 }
 
-@media screen and (max-device-width: 768px) {
+@media screen and (max-width: 768px) {
 
     .btn-group-vertical {
         text-align: center;
@@ -302,12 +302,6 @@ table .expand {
     }
 }
 
-@media screen and (max-device-width: 767px) {
-    table .noMobile {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 767px) {
     table .noMobile {
         display: none;
@@ -315,12 +309,6 @@ table .expand {
 }
 
 @media screen and (min-width:768px) and (max-width: 1365px) {
-    table .noSmall {
-        display: none;
-    }
-}
-
-@media screen and (min-device-width:768px) and (max-device-width: 1365px) {
     table .noSmall {
         display: none;
     }
