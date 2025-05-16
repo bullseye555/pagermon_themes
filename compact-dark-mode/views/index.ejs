@@ -205,7 +205,14 @@
             <!-- MESSAGE Column - All modes -->
             <td class="expand">
             <!-- Display the message for all display modes -->
-              <div style="color: white" highlight="message.message" replacement="init.replaceText" class="pagerMessage"></div>
+            <div style="color: white; display: flex; align-items: center;" class="pagerMessage"> <!-- Remove display: flex; if you want the map icon to display directly next to the decoded message -->
+                <span style="flex: 1;" highlight="message.message" replacement="init.replaceText"></span> <!-- Remove style="flex: 1;" if you want the map icon to display directly next to the decoded message -->
+                <span ng-if="extractAddress(message.message)">
+                  <a ng-href="https://www.google.com/maps/search/{{ encodeAddress(extractAddress(message.message)) }}" target="_blank" title="View on map">
+                  <i class="fa fa-map" aria-hidden="true"></i>
+                  </a>
+                </span>
+            </div>
             <!-- In Mobile Mode, add a line break and display the alias and enable popup to filter by alias-->
               <span class="shrink noLarge noSmall" uib-popover-template="'templates/popover.html'" popover-append-to-body=true ng-click="popoverEl = 'alias'" popover-trigger="'outsideClick'" style="color: {{message.color || 'grey'}}; text-align: center;" ng-if="message.agency">{{message.alias || 'Unknown'}}</span>
               <% if ((login && user.role == 'admin')) { %>
@@ -659,7 +666,16 @@
             });
           }
       };
-      
+
+      $scope.extractAddress = function (text) {
+        const match = text.match(  /(?:\b\d{1,5}\s[A-Z]+(?:\s[A-Z]+)*\s(?:DR|ST|RD|AVE|AV|BVD|CCT|CL|CRES|CR|CT|ESP|HWY|LN|PDE|PL|PKWY|RISE|SQ|TCE|TRK|WAY|WALK)\s[A-Z]+(?:\s[A-Z]+)*(?=\s\/|\/\/|\sM\b|\sSV[A-Z]{1,2}\b|\s\())|(?:CNR\s[A-Z0-9]+\s?(?:[A-Z]+\s?)*\/[A-Z0-9]+\s?(?:[A-Z]+\s?)*\s[A-Z]+(?:\s[A-Z]+)*(?=\sM\b|\sSV[A-Z]{2}\b|\s\())|(?:\b[A-Z]+(?:\s[A-Z]+)*\s(?:DR|ST|RD|AVE|AV|BVD|CCT|CL|CRES|CR|CT|ESP|HWY|LN|PDE|PL|PKWY|RISE|SQ|TCE|TRK|WAY|WALK)\s[A-Z]+(?:\s[A-Z]+)*(?=\sSV[A-Z]{1,2}\b|\sM\b|\s\())/i);
+        return match ? match[0] : null;
+      };
+
+      $scope.encodeAddress = function (text) {
+        return encodeURIComponent(text);
+      };
+
       $scope.clearSearch = function(){
         $scope.query = '';
       };
