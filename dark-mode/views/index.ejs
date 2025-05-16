@@ -148,7 +148,14 @@
               <span>{{message.alias || ''}}</span>
             </td>
             <td class="expand">
-              <div highlight="message.message" replacement="init.replaceText" class="pagerMessage"></div>
+              <div style="color: white; display: flex; align-items: center;" class="pagerMessage"> <!-- Remove display: flex; if you want the map icon to display directly next to the decoded message -->
+                <span style="flex: 1;" highlight="message.message" replacement="init.replaceText"></span> <!-- Remove style="flex: 1;" if you want the map icon to display directly next to the decoded message -->
+                <span ng-if="extractAddress(message.message)">
+                  <a ng-href="https://www.google.com/maps/search/{{ encodeAddress(extractAddress(message.message)) }}" target="_blank" title="View on map">
+                  <i class="fa fa-map" aria-hidden="true"></i>
+                  </a>
+                </span>
+            </div>
             </td>
         </tbody>
       </table>
