@@ -666,7 +666,16 @@
             });
           }
       };
-      
+
+      $scope.extractAddress = function (text) {
+        const match = text.match(  /(?:\b\d{1,5}\s[A-Z]+(?:\s[A-Z]+)*\s(?:DR|ST|RD|AVE|AV|BVD|CCT|CL|CRES|CR|CT|ESP|HWY|LN|PDE|PL|PKWY|RISE|SQ|TCE|TRK|WAY|WALK)\s[A-Z]+(?:\s[A-Z]+)*(?=\s\/|\/\/|\sM\b|\sSV[A-Z]{1,2}\b|\s\())|(?:CNR\s[A-Z0-9]+\s?(?:[A-Z]+\s?)*\/[A-Z0-9]+\s?(?:[A-Z]+\s?)*\s[A-Z]+(?:\s[A-Z]+)*(?=\sM\b|\sSV[A-Z]{2}\b|\s\())|(?:\b[A-Z]+(?:\s[A-Z]+)*\s(?:DR|ST|RD|AVE|AV|BVD|CCT|CL|CRES|CR|CT|ESP|HWY|LN|PDE|PL|PKWY|RISE|SQ|TCE|TRK|WAY|WALK)\s[A-Z]+(?:\s[A-Z]+)*(?=\sSV[A-Z]{1,2}\b|\sM\b|\s\())/i);
+        return match ? match[0] : null;
+      };
+
+      $scope.encodeAddress = function (text) {
+        return encodeURIComponent(text);
+      };
+
       $scope.clearSearch = function(){
         $scope.query = '';
       };
