@@ -277,7 +277,7 @@ a:hover, a:focus {
     padding: 5px 7.5px;
 }
 
-@media screen and (max-device-width: 767px) {
+@media screen and (max-width: 767px) {
 
     .btn-group-vertical {
         text-align: center;
@@ -373,11 +373,6 @@ td.clickable-td:hover, td.clickable-td:focus, td.clickable-td:focus:hover {
     margin-bottom: 15px;
     }
 }
-@media screen and (max-device-width: 767px) {
-    table .noMobile {
-        display: none;
-    }
-}
 
 @media screen and (max-width: 767px) {
     table .noMobile {
@@ -386,12 +381,6 @@ td.clickable-td:hover, td.clickable-td:focus, td.clickable-td:focus:hover {
 }
 
 @media screen and (min-width:768px) and (max-width: 1365px) {
-    table .noSmall {
-        display: none;
-    }
-}
-
-@media screen and (min-device-width:768px) and (max-device-width: 1365px) {
     table .noSmall {
         display: none;
     }
