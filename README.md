@@ -1,4 +1,4 @@
-# [PagerMon]([https://hrng.io/](https://github.com/pagermon/pagermon)https://github.com/pagermon/pagermon)
+# [PagerMon](https://github.com/pagermon/pagermon)
 ## Additional Pagermon Themes
 
 ### Compact Mode (uses the Pagermon Colour Scheme as at 0.3.13)
@@ -24,7 +24,7 @@ _Logged Out_ view (or where _Source_ and _Capcode_ are not **publicly** displaye
 Download the complete folder [here](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fbullseye555%2Fpagermon_themes%2Ftree%2Fmain%2Fcompact-default) (Download function provided by external website [download-directory.github.io](https://download-directory.github.io)). This will download the full folder as a ZIP file. Be sure to unzip if before uploading to Pagermon!
 
 ### Dark Mode (uses the Pagermon Default Layout as at 0.3.13)
-Changes the colour theme of the Paremon Default Layout to a Dark Mode
+Changes the colour theme of the Pagermon Default Layout to a Dark Mode
 ![image](https://github.com/bullseye555/pagermon_themes/assets/28804763/c34f3804-a36f-4344-bcdc-b636fe197712)
 
 Example showing _Highlight_ (@@ALERT 00404 SF 2A) and _Label_ (F231129406)  highlighting
